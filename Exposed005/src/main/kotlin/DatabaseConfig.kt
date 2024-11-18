@@ -1,5 +1,7 @@
 package org.example
 
+import org.example.Tables.Cities
+import org.example.Tables.StarWarsFilms
 import org.example.models.Person
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
@@ -18,6 +20,8 @@ class DatabaseConfig {
 
             transaction{
                 SchemaUtils.create(Person)
+                SchemaUtils.create(Cities)
+                SchemaUtils.create(StarWarsFilms)
             }
 
             println("success create schemas")
